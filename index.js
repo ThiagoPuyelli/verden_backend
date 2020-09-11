@@ -3,7 +3,8 @@ const morgan = require("morgan");
 const app = express();
 
 // Config
-app.set("port", 3000);
+app.set("port", process.env.PORT || 3000);
+require("./database");
 
 // Middlewares
 
