@@ -1,11 +1,10 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const Section = require("./Section");
 
 const courseSchema = new Schema({
     name: {type: String, required: true},
     image: String,
-    sections: {type: [Section]},
+    sections: {type: [String]},
     category: {type: String, required: true},
     difficulty: {type: String, required: true},
     rating: {type: Number, default: 0, min: 0, max: 10},
@@ -15,4 +14,4 @@ const courseSchema = new Schema({
     instructorID: {type: String, required: true}
 })
 
-module.exports = moongose.model("Course", courseSchema);
+module.exports = mongoose.model("Course", courseSchema);
