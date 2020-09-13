@@ -15,6 +15,8 @@ app.use(express.json());
 // Routes
 
 app.use("/courses/", require("./routes/coursesRoutes"));
+app.use("/section/", require("./routes/sectionRoutes"));
+app.use("/part/", require("./routes/partRoutes"));
 
 // Starting to server
 

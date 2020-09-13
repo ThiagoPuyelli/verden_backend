@@ -1,11 +1,10 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const Part = require("./Part");
 
 const sectionSchema = new Schema({
     name: {type: String, required: true},
     position: {type: String, required: true},
-    parts: {type: [Part]},
+    partsID: {type: [String]},
     courseID: {type: String, required: true}
 });
 
